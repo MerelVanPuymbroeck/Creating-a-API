@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^generateRandomArray/([0-9]+) API.php/?length=$1
