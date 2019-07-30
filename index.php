@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
-$myObj->name = "Merel";
-$myObj->age = 23;
-$myObj->city = "Beveren";
+header('Content-Type: application/json');
+$MerelArray = []; //aray
+for ($i = 0; $i<25; $i++){ // 25 keer vanwege 25 nummers
+    
+    $randomNumbers = mt_rand (0,150);
+    $NumberArray = [$i,$randomNumbers];
+    array_push($MerelArray,$NumberArray); // random nummers te verkrijgen
+}
 
-$myJSON = json_encode($myObj);
+echo json_encode($MerelArray); //om deze nummers te pushen
 
-echo $myJSON;
 ?>
-</body>
-</html>
